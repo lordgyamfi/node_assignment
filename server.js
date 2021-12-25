@@ -8,6 +8,9 @@ const PORT = process.env.PORT || 3000;
 
 
 app.use(express.json());
+app.get('/', function(req, res){
+    res.status(200).json({message:'Welcome to Lord Todo API'});
+    });
 
 app.get('/user', userController.getAllUser);
 app.post('/user', userController.addUser);
